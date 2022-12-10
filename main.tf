@@ -13,7 +13,7 @@ provider "docker" {
 }
 
 resource "docker_image" "ubuntu" {
-  name = quay.io/bedrock/ubuntu
+  name = var.ubuntu_image
 }
 
 resource "docker_container" "ubuntu" {
