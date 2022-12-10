@@ -18,7 +18,7 @@ resource "docker_image" "ubuntu" {
 
 resource "docker_container" "ubuntu" {
   name     = var.container_name
-  image    = docker_image.ubuntu.image_id
+  image    = quay.io/bedrock/ubuntu
   must_run = true
   command = [
     "tail",
